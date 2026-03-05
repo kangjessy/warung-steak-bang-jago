@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bang Jago Steak - Texas BBQ Style</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i data-lucide="beef" style="width:32px;height:32px;margin-right:8px;vertical-align:middle;"></i>
+        Bang <span>Jago</span> Steak
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="#about" class="nav-link">The Story</a>
+        <a href="#menu" class="nav-link">Our Meats</a>
+        <a href="#order" class="nav-link">How to Grub</a>
+      </nav>
+
+      <div class="nav-actions" style="display:flex;align-items:center;gap:16px;">
+        <a href="#menu" class="btn btn-primary" style="padding:10px 24px;font-size:1rem;">Order Now</a>
+        <button class="mobile-toggle"><i data-lucide="menu"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" style="background-color: var(--bg-secondary);">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="badge-text">Est. 2020 • Bandung</span>
+        <h1 class="heading-display">Steak Enak, <br>Harga Gak <br>Bikin Nangis!</h1>
+        <p class="hero-desc">Bite into the boldest flavors in town. Daging segar, bumbu meresap, and porsi yang bikin kenyang. Asli enak, asli murah.</p>
+        <div style="display:flex;gap:16px;">
+          <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+          <a href="#about" class="btn btn-mustard">Kenapa Kami?</a>
+        </div>
+      </div>
+      
+      <div style="padding: 24px;">
+        <div class="hero-image-wrap">
+          <img src="assets/images/hero_steak.png" alt="Signature Steak Bang Jago" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      
+      <div class="about-poster">
+        <img src="assets/images/menu_sirloin_nasi.png" alt="Steak and Rice" loading="lazy">
+        <h3>100% Halal Certified</h3>
+        <p style="font-weight:700;margin-top:8px;">BEEF • CHICKEN • PASTA</p>
+      </div>
+      
+      <div>
+        <h2 class="heading-lg">The Bang Jago Way</h2>
+        <p style="font-size:1.1rem;font-weight:500;">
+          Lahir dari keyakinan sederhana: steak enak seharusnya bisa dinikmati semua orang. Tidak perlu dompet tebal, tidak mau porsi pelit.
+        </p>
+        
+        <div class="features-list">
+          <div class="feature-item">
+            <h4>Murah Meriah</h4>
+            <p>Mulai Rp25k aja udah dapet hot plate mendesis.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Porsi Kuli</h4>
+            <p>Jangan takut kurang, porsi kita jamin bikin ngantuk.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Dimasak Fresh</h4>
+            <p>Made to order, daging selalu segar tiap hari.</p>
+          </div>
+          <div class="feature-item">
+            <h4>Bumbu Meresap</h4>
+            <p>Marinasi semalaman, sausnya lumer di mulut.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU / THE MEATS -->
+  <section class="section section-dark" id="menu">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="heading-display" style="color:var(--brand-mustard)">Our Meats</h2>
+        <p style="font-family:var(--font-display);font-size:1.5rem;">Pick your poison, we'll grill it right.</p>
+      </div>
+
+      <div class="menu-grid">
+        
+        <!-- Item 1 -->
+        <article class="menu-card">
+          <div class="menu-img-wrap">
+            <img src="assets/images/menu_beef_tenderloin.png" alt="Tenderloin" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-title">Tenderloin Prime</h3>
+            <p class="menu-desc">Potongan empuk tebal, saus pepper rich melimpah. Side dish lengkap menanti.</p>
+            <div class="menu-footer">
+              <span class="menu-price">Rp 55k</span>
+              <a href="#" class="btn btn-primary" style="padding:6px 16px;font-size:0.9rem">+ Add</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="menu-card">
+          <div class="menu-img-wrap">
+            <img src="assets/images/menu_sirloin_nasi.png" alt="Sirloin" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-title">Classic Sirloin</h3>
+            <p class="menu-desc">Juicy sirloin on a hot iron plate. Terlaris sepanjang masa buat yang laper parah.</p>
+            <div class="menu-footer">
+              <span class="menu-price">Rp 45k</span>
+              <a href="#" class="btn btn-mustard" style="padding:6px 16px;font-size:0.9rem">+ Add</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="menu-card">
+          <div class="menu-img-wrap">
+            <img src="assets/images/menu_chicken_steak.png" alt="Chicken" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-title">Smothered Chicken</h3>
+            <p class="menu-desc">Dada ayam grill + saus jamur creamy gurih. Comfort food sejati anak nongkrong.</p>
+            <div class="menu-footer">
+              <span class="menu-price">Rp 32k</span>
+              <a href="#" class="btn btn-primary" style="padding:6px 16px;font-size:0.9rem">+ Add</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="menu-card">
+          <div class="menu-img-wrap">
+            <img src="assets/images/menu_spaghetti_blackpepper.png" alt="Pasta" loading="lazy">
+          </div>
+          <div class="menu-info">
+            <h3 class="menu-title">Spaghetti BP</h3>
+            <p class="menu-desc">Bosan nasi? Sikat pasta dengan daging sapi berlumur blackpepper nendang.</p>
+            <div class="menu-footer">
+              <span class="menu-price">Rp 28k</span>
+              <a href="#" class="btn btn-primary" style="padding:6px 16px;font-size:0.9rem">+ Add</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO ORDER -->
+  <section class="section" id="order" style="background-color: var(--bg-secondary);">
+    <div class="container">
+      
+      <div class="order-ticket">
+        <div class="ticket-header">
+          <h2 class="heading-lg" style="margin:0;">How to Get Grub</h2>
+        </div>
+        <div class="ticket-body">
+          <div class="order-step">
+            <div class="order-step-num">01</div>
+            <h4 style="font-family:var(--font-display);font-size:1.5rem;color:var(--brand-mustard);margin-bottom:8px">Walk In</h4>
+            <p>Come on down to our joint. Smells like heaven, tastes even better.</p>
+          </div>
+          <div class="order-step">
+            <div class="order-step-num">02</div>
+            <h4 style="font-family:var(--font-display);font-size:1.5rem;color:var(--brand-mustard);margin-bottom:8px">Hit the App</h4>
+            <p>Available on GoFood & ShopeeFood. Couch dining approved.</p>
+          </div>
+          <div class="order-step">
+            <div class="order-step-num">03</div>
+            <h4 style="font-family:var(--font-display);font-size:1.5rem;color:var(--brand-mustard);margin-bottom:8px">Holler on WA</h4>
+            <p>Text us directly. We pack it up fast for you to pick up or delivery.</p>
+          </div>
+        </div>
+        <div style="text-align:center;padding:24px;border-top:var(--border-thin);">
+          <a href="#" class="btn btn-primary">Fire Up WhatsApp <i data-lucide="message-square" style="margin-left:8px;width:20px;"></i></a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- LOCATION & MAP -->
+  <section class="section" id="location" style="padding-bottom: 0; border-bottom: none;">
+    <div class="container text-center" style="margin-bottom: 40px;">
+      <h2 class="heading-lg">Find Our Joint</h2>
+      <p style="font-family:var(--font-display);font-size:1.5rem;color:var(--brand-red);">Pull up, park, and chow down.</p>
+    </div>
+    <div style="width:100%; height:450px; border-top:var(--border-thick); border-bottom:var(--border-thick);">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.5!2d107.5306!3d-6.9174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3281af4!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000" 
+        width="100%" height="100%" style="border:0; filter: sepia(0.5) contrast(1.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-signboard">
+        <div class="sign-wrapper">
+          <div class="sign-top">
+            <i data-lucide="star" style="width:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;fill:currentColor"></i>
+            <span>SINCE 2020</span>
+            <i data-lucide="star" style="width:16px;fill:currentColor"></i>
+            <i data-lucide="star" style="width:16px;fill:currentColor"></i>
+          </div>
+          <div class="sign-main">
+            <h1>Bang Jago</h1>
+            <h2>STEAKHOUSE</h2>
+          </div>
+          <div class="sign-bottom">
+            GREAT MEAT • GOOD TIMES • CHEAP EATS
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-info">
+        <div class="footer-col">
+          <h4>Drop By</h4>
+          <p>Jl. Jend. Sudirman No. 45<br>Bandung, Jawa Barat 40211</p>
+        </div>
+        <div class="footer-col text-center">
+          <h4>Hours</h4>
+          <p>Mon - Fri: 10AM - 10PM<br>Sat - Sun: 9AM - 11PM</p>
+        </div>
+        <div class="footer-col" style="text-align: right;">
+          <h4>Holler At Us</h4>
+          <p>WA: 0812-3456-7890<br>IG: @warungsteakbangjago</p>
+        </div>
+      </div>
+      
+      <div class="footer-copyright">
+        © 2026 Warung Steak Bang Jago. Stay Hungry.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <button class="mobile-nav-close" id="mobileNavClose"><i data-lucide="x"></i></button>
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-links">
+        <a href="#about" class="nav-link">The Story</a>
+        <a href="#menu" class="nav-link">Our Meats</a>
+        <a href="#order" class="nav-link">How to Grub</a>
+        <a href="#location" class="nav-link">Location</a>
+      </div>
+      <div style="margin-top:40px;text-align:center;">
+        <a href="https://wa.me/6281224329422" target="_blank" class="btn btn-primary" style="display:inline-flex;width:80%;max-width:300px;justify-content:center;">PESAN SEKARANG</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- DESIGN SWITCHER FLOATING BUTTON -->
+<div id="design-switcher" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 10000; font-family: 'Inter', sans-serif;">
+  <button id="switcher-toggle" style="width: 56px; height: 56px; border-radius: 50%; background: #C9A84C; color: #000; border: 4px solid #1a1a1a; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.4); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); padding: 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="12.5" cy="14.5" r=".5" fill="currentColor"/><circle cx="7.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.7-.39 2.3-1.03a4.03 4.03 0 0 0 .7-3.97 4 4 0 0 1 5.33-4.14 10 10 0 1 0-11.83-11.83A4 4 0 0 1 12 2z"/></svg>
+  </button>
+  
+  <div id="switcher-menu" style="position: absolute; right: 70px; top: 50%; transform: translateY(-50%) scale(0.9); opacity: 0; pointer-events: none; background: #111; padding: 20px; border-radius: 16px; border: 1px solid #333; box-shadow: 0 20px 50px rgba(0,0,0,0.6); width: 240px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform-origin: right center;">
+    <h3 style="color: #C9A84C; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid #222; padding-bottom: 10px;">Ganti Desain</h3>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <a href="../opsi-1/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 1: Luxury Dark</a>
+      <a href="../opsi-2/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 2: Modern Elegant</a>
+      <a href="../opsi-3/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 3: Rustic Warm</a>
+      <a href="../opsi-4/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 4: Neo-Brutalism</a>
+      <a href="../opsi-5/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 5: Street Industrial</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    #design-switcher {
+      right: 15px !important;
+      top: auto !important;
+      bottom: 30px !important;
+      transform: none !important;
+    }
+    #switcher-menu {
+      right: 0 !important;
+      bottom: 70px !important;
+      top: auto !important;
+      transform: translateY(20px) scale(0.9) !important;
+      transform-origin: bottom right !important;
+      width: 220px !important;
+    }
+    #switcher-menu.active {
+      transform: translateY(0) scale(1) !important;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    const toggle = document.getElementById('switcher-toggle');
+    const menu = document.getElementById('switcher-menu');
+    let isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      menu.style.opacity = '1';
+      menu.style.pointerEvents = 'auto';
+      if (window.innerWidth > 768) {
+        menu.style.transform = 'translateY(-50%) scale(1)';
+      } else {
+        menu.classList.add('active');
+        menu.style.transform = 'translateY(0) scale(1)';
+      }
+      toggle.style.background = '#000';
+      toggle.style.color = '#C9A84C';
+      toggle.style.transform = 'rotate(90deg)';
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      menu.style.opacity = '0';
+      menu.style.pointerEvents = 'none';
+      if (window.innerWidth > 768) {
+        menu.style.transform = 'translateY(-50%) scale(0.9)';
+      } else {
+        menu.classList.remove('active');
+        menu.style.transform = 'translateY(20px) scale(0.9)';
+      }
+      toggle.style.background = '#C9A84C';
+      toggle.style.color = '#000';
+      toggle.style.transform = 'rotate(0deg)';
+    }
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!isOpen) openMenu();
+      else closeMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (isOpen && !menu.contains(e.target)) {
+        closeMenu();
+      }
+    });
+    
+    // Highlight current
+    const links = document.querySelectorAll('.sw-link');
+    const currentFolder = window.location.pathname.split('/').filter(x => x.startsWith('opsi-'))[0] || '';
+    
+    links.forEach(link => {
+      if (link.getAttribute('href').includes(currentFolder)) {
+        link.style.background = '#C9A84C';
+        link.style.color = '#000';
+        link.style.border = 'none';
+        link.style.fontWeight = '700';
+      }
+      
+      link.addEventListener('mouseenter', () => {
+        if (!link.style.background.includes('C9A84C')) {
+          link.style.background = '#222';
+          link.style.color = '#fff';
+          link.style.transform = 'translateX(5px)';
+        }
+      });
+      link.addEventListener('mouseleave', () => {
+        if (!link.style.background.includes('C9A84C')) {
+          link.style.background = '#1a1a1a';
+          link.style.color = '#999';
+          link.style.transform = 'translateX(0)';
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warung Steak Bang Jago — Murah, Lezat, Melimpah</title>
+  <meta name="description" content="Warung Steak Bang Jago. Steak premium rasa restoran, harga warung. Tersedia dine-in, GoFood, ShopeeFood, dan pemesanan via WhatsApp." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23C9A84C'/><text y='.9em' font-size='64' x='18'>S</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="nav-logo-name">Bang <em>Jago</em> Steak</span>
+      <span class="nav-logo-tagline">Murah · Lezat · Melimpah</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#cara-order">Order</a></li>
+      <li><a href="#lokasi">Lokasi</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="https://wa.me/6281224329422?text=Halo%20Bang%20Jago%2C%20saya%20mau%20pesan!" target="_blank" class="btn btn-primary nav-cta-btn" id="btn-nav-wa">
+        <i data-lucide="message-circle" class="icon icon-sm"></i> Pesan Sekarang
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Tutup">
+    <i data-lucide="x" class="icon icon-lg"></i>
+  </button>
+  <a href="#tentang">Tentang</a>
+  <a href="#menu">Menu</a>
+  <a href="#cara-order">Order</a>
+  <a href="#lokasi">Lokasi</a>
+  <a href="#gallery">Gallery</a>
+  <a href="https://wa.me/6281224329422" target="_blank" class="btn btn-primary" style="margin-top:16px;">Pesan via WhatsApp</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      <span class="t-subheading">Warung Steak Sejuta Umat</span>
+    </div>
+    <h1 class="hero-title">
+      Steak Enak,<br>
+      <em>Harga Gak<br>Bikin Nangis</em>
+    </h1>
+    <p class="hero-desc">
+      Steak premium rasa restoran, harga warung. Daging segar, bumbu meresap, porsi melimpah — dinikmati bersama keluarga maupun pasangan.
+    </p>
+    <div class="hero-cta">
+      <a href="https://wa.me/6281224329422?text=Halo%20Bang%20Jago%2C%20saya%20mau%20pesan!" target="_blank" class="btn btn-primary" id="btn-hero-wa">
+        <i data-lucide="message-circle" class="icon icon-sm"></i> Pesan via WhatsApp
+      </a>
+      <a href="#menu" class="btn btn-ghost" id="btn-hero-menu">
+        Lihat Menu
+        <i data-lucide="arrow-down" class="icon icon-sm"></i>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-counter data-target="5000" data-suffix="+">5000+</div>
+        <div class="hero-stat-label">Pelanggan Puas</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-counter data-target="20" data-suffix="+">20+</div>
+        <div class="hero-stat-label">Varian Menu</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-number" data-counter data-target="4" data-suffix=" Outlet">4 Outlet</div>
+        <div class="hero-stat-label">Cabang Aktif</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="assets/images/hero_steak.png" alt="Signature steak Bang Jago" class="hero-img" id="heroImg" />
+    <div class="hero-right-overlay"></div>
+  </div>
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    <span class="t-caption">Halal Certified</span>
+  </div>
+  <div class="hero-scroll" onclick="document.getElementById('tentang').scrollIntoView({behavior:'smooth'})">
+    <span class="hero-scroll-line"></span>
+    <span class="hero-scroll-label">Scroll</span>
+  </div>
+</section>
+
+<!-- ===== TENTANG ===== -->
+<section id="tentang" class="section section--alt">
+  <div class="container">
+    <div class="tentang-grid">
+      <div class="tentang-visual">
+        <div class="tentang-year">
+          <div class="tentang-year-num">Est.</div>
+          <div class="tentang-year-label">Bang Jago</div>
+        </div>
+        <img src="assets/images/menu_sirloin_nasi.png" alt="Beef steak Bang Jago" class="tentang-img-main reveal" />
+        <img src="assets/images/menu_chicken_steak.png" alt="Menu chicken steak" class="tentang-img-accent reveal reveal-delay-2" />
+      </div>
+      <div class="tentang-content">
+        <span class="t-subheading reveal">Tentang Kami</span>
+        <h2 class="t-headline reveal reveal-delay-1" style="margin-top:16px;margin-bottom:20px;">
+          Steak yang<br><em style="font-style:italic;color:var(--gold);">Gak Mengecewakan</em>
+        </h2>
+        <p class="t-body reveal reveal-delay-2">
+          Warung Steak Bang Jago lahir dari keyakinan sederhana: steak enak seharusnya bisa dinikmati semua orang. Tidak perlu dompet tebal, tidak perlu jauh-jauh ke restoran mahal.
+        </p>
+        <p class="t-body reveal reveal-delay-2">
+          Dengan bahan segar pilihan, bumbu khas yang meresap, dan porsi yang tidak tanggung-tanggung — kami hadir untuk membuktikan bahwa kenikmatan tidak harus mahal.
+        </p>
+        <div class="tentang-pillars reveal reveal-delay-3">
+          <div class="tentang-pillar">
+            <i data-lucide="coins" class="tentang-pillar-icon"></i>
+            <div class="tentang-pillar-name">Murah</div>
+            <div class="tentang-pillar-desc">Mulai dari Rp 25.000-an, nikmati steak sesungguhnya</div>
+          </div>
+          <div class="tentang-pillar">
+            <i data-lucide="flame" class="tentang-pillar-icon"></i>
+            <div class="tentang-pillar-name">Lezat</div>
+            <div class="tentang-pillar-desc">Dimasak fresh di atas hot plate, saus khas yang nagih</div>
+          </div>
+          <div class="tentang-pillar">
+            <i data-lucide="layers" class="tentang-pillar-icon"></i>
+            <div class="tentang-pillar-name">Melimpah</div>
+            <div class="tentang-pillar-desc">Porsi jumbo anti lapar, satu porsi kenyang maksimal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section id="menu" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="t-subheading">Menu Kami</span>
+      <h2 class="t-headline" style="margin-top:16px;">Menu <em style="font-style:italic;color:var(--gold);">Favorit</em> Pelanggan</h2>
+      <p class="t-body" style="margin-top:12px;">Dari steak sapi, ayam, hingga pasta — semua ada, semua enak.</p>
+    </div>
+
+    <div class="menu-filter reveal">
+      <button class="menu-filter-btn active" data-filter="semua" id="tab-semua">Semua</button>
+      <button class="menu-filter-btn" data-filter="steak-sapi" id="tab-steak-sapi">Steak Sapi</button>
+      <button class="menu-filter-btn" data-filter="steak-ayam" id="tab-steak-ayam">Steak Ayam</button>
+      <button class="menu-filter-btn" data-filter="pasta" id="tab-pasta">Pasta</button>
+      <button class="menu-filter-btn" data-filter="minuman" id="tab-minuman">Minuman</button>
+    </div>
+
+    <div class="menu-grid">
+      <!-- STEAK SAPI -->
+      <article class="menu-card" data-category="steak-sapi" id="menu-sirloin">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_sirloin_nasi.png" alt="Sirloin Steak" class="menu-card-img" loading="lazy" />
+          <span class="menu-card-tag">Terlaris</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Steak Sapi</div>
+          <h3 class="menu-card-name">Sirloin Steak</h3>
+          <p class="menu-card-desc">Sirloin juicy di atas hot plate besi, saus lada hitam kental, nasi putih, kentang goreng, dan jagung manis.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 45.000</div>
+              <div class="menu-card-price-note">+ nasi, kentang & jagung</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Sirloin%20Steak" target="_blank" class="menu-card-order-btn" id="order-sirloin">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="steak-sapi" id="menu-tenderloin">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_beef_tenderloin.png" alt="Tenderloin Steak" class="menu-card-img" loading="lazy" />
+          <span class="menu-card-tag">Favorit</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Steak Sapi</div>
+          <h3 class="menu-card-name">Tenderloin Steak</h3>
+          <p class="menu-card-desc">Potongan tenderloin empuk dan tebal, dilumuri saus pepper rich. Pelengkap lengkap — kenyang terjamin.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 55.000</div>
+              <div class="menu-card-price-note">+ nasi, kentang & jagung</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Tenderloin%20Steak" target="_blank" class="menu-card-order-btn" id="order-tenderloin">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="steak-sapi" id="menu-ribeye">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_sirloin_nasi.png" alt="Ribeye Special" class="menu-card-img" loading="lazy" />
+          <span class="menu-card-tag menu-card-tag--new">Special</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Steak Sapi</div>
+          <h3 class="menu-card-name">Ribeye Special</h3>
+          <p class="menu-card-desc">Ribeye marbling sempurna, rasa kaya dan juicy. Pilihan saus: BBQ, Blackpepper, atau Mushroom Cream.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 65.000</div>
+              <div class="menu-card-price-note">+ nasi, kentang & jagung</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Ribeye%20Special" target="_blank" class="menu-card-order-btn" id="order-ribeye">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- STEAK AYAM -->
+      <article class="menu-card" data-category="steak-ayam" id="menu-chicken-mushroom">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_chicken_steak.png" alt="Chicken Mushroom" class="menu-card-img" loading="lazy" />
+          <span class="menu-card-tag">Bestseller</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Steak Ayam</div>
+          <h3 class="menu-card-name">Chicken Mushroom</h3>
+          <p class="menu-card-desc">Dada ayam grill dengan saus jamur creamy gurih. Lembut di dalam, sedikit crispy di luar. Pilihan sempurna.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 32.000</div>
+              <div class="menu-card-price-note">+ nasi, kentang & jagung</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Chicken%20Mushroom" target="_blank" class="menu-card-order-btn" id="order-chicken-mushroom">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="steak-ayam" id="menu-chicken-blackpepper">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_chicken_steak.png" alt="Chicken Blackpepper" class="menu-card-img" loading="lazy" />
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Steak Ayam</div>
+          <h3 class="menu-card-name">Chicken Blackpepper</h3>
+          <p class="menu-card-desc">Ayam grill dengan saus lada hitam pedas-gurih khas Bang Jago. Rasa bold yang tidak terlupakan.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 30.000</div>
+              <div class="menu-card-price-note">+ nasi, kentang & jagung</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Chicken%20Blackpepper" target="_blank" class="menu-card-order-btn" id="order-chicken-bp">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PASTA -->
+      <article class="menu-card" data-category="pasta" id="menu-spag-bp">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_spaghetti_blackpepper.png" alt="Spaghetti Beef Blackpepper" class="menu-card-img" loading="lazy" />
+          <span class="menu-card-tag">Pedas Gurih</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Pasta</div>
+          <h3 class="menu-card-name">Spaghetti Beef Blackpepper</h3>
+          <p class="menu-card-desc">Spaghetti dengan potongan daging sapi dan saus lada hitam kental. Rasa yang bikin nagih dan susah berhenti.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 28.000</div>
+              <div class="menu-card-price-note">tanpa nasi</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Spaghetti%20Beef%20Blackpepper" target="_blank" class="menu-card-order-btn" id="order-spag-bp">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="pasta" id="menu-spag-carbonara">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_spaghetti_carbonara.png" alt="Spaghetti Carbonara" class="menu-card-img" loading="lazy" />
+          <span class="menu-card-tag">Favorit</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Pasta</div>
+          <h3 class="menu-card-name">Spaghetti Carbonara</h3>
+          <p class="menu-card-desc">Saus krim putih lembut dan gurih, ayam strip, taburan keju dan lada hitam. Creamy, gurih, lengkap rasanya.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 26.000</div>
+              <div class="menu-card-price-note">tanpa nasi</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Spaghetti%20Carbonara" target="_blank" class="menu-card-order-btn" id="order-spag-carbonara">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- MINUMAN -->
+      <article class="menu-card" data-category="minuman" id="menu-lemon">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_beef_tenderloin.png" alt="Lemon Squash" class="menu-card-img" loading="lazy" />
+          <span class="menu-card-tag">Segar</span>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Minuman</div>
+          <h3 class="menu-card-name">Lemon Squash</h3>
+          <p class="menu-card-desc">Perasan lemon asli dengan es batu, segar dan pas menemani steak panas. Tidak terlalu manis, sangat refreshing.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 12.000</div>
+              <div class="menu-card-price-note">ukuran reguler</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Lemon%20Squash" target="_blank" class="menu-card-order-btn" id="order-lemon">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card" data-category="minuman" id="menu-green-tea">
+        <div class="menu-card-img-wrap">
+          <img src="assets/images/menu_spaghetti_carbonara.png" alt="Green Tea Ice" class="menu-card-img" loading="lazy" />
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-category">Minuman</div>
+          <h3 class="menu-card-name">Green Tea Ice</h3>
+          <p class="menu-card-desc">Green tea premium berbusa, manis-segar, cocok menemani makan besar. Rasa teh hijau autentik yang tidak pahit.</p>
+          <div class="menu-card-footer">
+            <div>
+              <div class="menu-card-price">Rp 15.000</div>
+              <div class="menu-card-price-note">ukuran reguler</div>
+            </div>
+            <a href="https://wa.me/6281224329422?text=Saya%20mau%20pesan%20Green%20Tea%20Ice" target="_blank" class="menu-card-order-btn" id="order-greentea">
+              Order <i data-lucide="arrow-right" style="width:13px;height:13px;"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="menu-cta reveal">
+      <p class="t-caption" style="margin-bottom:16px;">Masih banyak pilihan menu lainnya tersedia</p>
+      <a href="https://wa.me/6281224329422?text=Boleh%20minta%20menu%20lengkapnya?" target="_blank" class="btn btn-ghost" id="btn-menu-lengkap">
+        <i data-lucide="file-text" class="icon icon-sm"></i> Minta Menu Lengkap
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CARA ORDER ===== -->
+<section id="cara-order" class="section section--alt">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <span class="t-subheading">Cara Order</span>
+      <h2 class="t-headline" style="margin-top:16px;">Gampang Banget <em style="font-style:italic;color:var(--gold);">Pesannya</em></h2>
+      <p class="t-body" style="margin-top:12px;max-width:480px;margin-left:auto;margin-right:auto;">Empat cara memesan, pilih mana yang paling nyaman untuk Anda.</p>
+    </div>
+
+    <div class="order-grid reveal">
+      <div class="order-card" id="order-dinein">
+        <div class="order-num">01</div>
+        <div class="order-icon-wrap">
+          <i data-lucide="utensils" class="icon"></i>
+        </div>
+        <div class="order-card-name">Dine-In</div>
+        <p class="order-card-desc">Kunjungi langsung outlet kami dan nikmati suasana makan yang hangat bersama keluarga maupun rekan.</p>
+        <a href="#lokasi" class="btn btn-ghost" style="font-size:var(--text-xs);padding:10px 20px;" id="btn-order-dinein">
+          Lihat Lokasi <i data-lucide="arrow-right" class="icon icon-sm"></i>
+        </a>
+      </div>
+
+      <div class="order-card" id="order-wa">
+        <div class="order-num">02</div>
+        <div class="order-icon-wrap">
+          <i data-lucide="message-circle" class="icon"></i>
+        </div>
+        <div class="order-card-name">WhatsApp</div>
+        <p class="order-card-desc">Pesan langsung via WhatsApp. Mudah, cepat, dan selalu ada yang melayani untuk membantu pesanan Anda.</p>
+        <a href="https://wa.me/6281224329422?text=Halo%20Bang%20Jago%2C%20saya%20mau%20pesan!" target="_blank" class="btn btn-primary" style="font-size:var(--text-xs);padding:10px 20px;" id="btn-order-wa">
+          Chat Sekarang <i data-lucide="arrow-right" class="icon icon-sm"></i>
+        </a>
+      </div>
+
+      <div class="order-card" id="order-gofood">
+        <div class="order-num">03</div>
+        <div class="order-icon-wrap">
+          <i data-lucide="bike" class="icon"></i>
+        </div>
+        <div class="order-card-name">GoFood</div>
+        <p class="order-card-desc">Tersedia di aplikasi Gojek. Pesan kapan saja, diantar langsung ke lokasi Anda. Promo cashback tersedia.</p>
+        <a href="https://gofood.co.id" target="_blank" class="btn btn-ghost" style="font-size:var(--text-xs);padding:10px 20px;" id="btn-order-gofood">
+          Buka GoFood <i data-lucide="arrow-right" class="icon icon-sm"></i>
+        </a>
+      </div>
+
+      <div class="order-card" id="order-shopeefood">
+        <div class="order-num">04</div>
+        <div class="order-icon-wrap">
+          <i data-lucide="shopping-bag" class="icon"></i>
+        </div>
+        <div class="order-card-name">ShopeeFood</div>
+        <p class="order-card-desc">Tersedia juga di ShopeeFood. Nikmati gratis ongkir dan promo menarik yang sering membuat hemat.</p>
+        <a href="https://shopee.co.id/food" target="_blank" class="btn btn-ghost" style="font-size:var(--text-xs);padding:10px 20px;" id="btn-order-shopeefood">
+          Buka ShopeeFood <i data-lucide="arrow-right" class="icon icon-sm"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="platform-row reveal" style="justify-content:center;">
+      <span class="t-caption" style="margin-right:8px;">Tersedia di:</span>
+      <span class="platform-badge"><i data-lucide="message-circle" class="icon icon-sm"></i> WhatsApp</span>
+      <span class="platform-badge"><i data-lucide="bike" class="icon icon-sm"></i> GoFood</span>
+      <span class="platform-badge"><i data-lucide="shopping-bag" class="icon icon-sm"></i> ShopeeFood</span>
+      <span class="platform-badge"><i data-lucide="check-circle" class="icon icon-sm"></i> Halal Certified</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOKASI ===== -->
+<section id="lokasi" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="t-subheading">Lokasi Kami</span>
+      <h2 class="t-headline" style="margin-top:16px;">Temukan <em style="font-style:italic;color:var(--gold);">Bang Jago</em> di Sini</h2>
+    </div>
+    <div class="lokasi-grid">
+      <div class="lokasi-info-list">
+        <div class="info-item reveal">
+          <div class="info-item-header">
+            <i data-lucide="map-pin" class="info-item-icon icon-sm"></i>
+            <span class="info-item-title">Alamat Outlet</span>
+          </div>
+          <div class="info-item-body">
+            Warung Steak Bang Jago<br>
+            Jl. Contoh No. 123, Kota Anda<br>
+            <span style="color:var(--text-tertiary);font-size:var(--text-sm);">Dekat perempatan utama, mudah ditemukan</span>
+          </div>
+          <a href="https://maps.app.goo.gl/Gb31RiswycA3pxx66" target="_blank" class="btn btn-ghost" style="margin-top:16px;font-size:var(--text-xs);padding:10px 20px;" id="btn-maps">
+            <i data-lucide="navigation" class="icon icon-sm"></i> Buka Google Maps
+          </a>
+        </div>
+
+        <div class="info-item reveal reveal-delay-1">
+          <div class="info-item-header">
+            <i data-lucide="clock" class="info-item-icon icon-sm"></i>
+            <span class="info-item-title">Jam Operasional</span>
+          </div>
+          <div class="hours-table">
+            <div class="hours-row">
+              <span class="hours-day">Senin – Jumat</span>
+              <span class="hours-time">10.00 – 22.00 <span class="hours-status">Buka</span></span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sabtu & Minggu</span>
+              <span class="hours-time">09.00 – 22.30 <span class="hours-status">Buka</span></span>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Hari Libur</span>
+              <span class="hours-time">10.00 – 21.00 <span class="hours-status">Buka</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-item reveal reveal-delay-2">
+          <div class="info-item-header">
+            <i data-lucide="phone" class="info-item-icon icon-sm"></i>
+            <span class="info-item-title">Kontak</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="message-circle" class="icon" style="color:var(--gold);width:14px;height:14px;margin-top:2px;"></i>
+            <div class="footer-contact-text"><a href="https://wa.me/6281224329422" target="_blank">0812-2432-9422</a> · WhatsApp / Telepon</div>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="instagram" class="icon" style="color:var(--gold);width:14px;height:14px;margin-top:2px;"></i>
+            <div class="footer-contact-text"><a href="https://www.instagram.com/warungsteakbangjago/" target="_blank">@warungsteakbangjago</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="map-container reveal reveal-delay-2">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.5!2d107.5306!3d-6.9174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3281af4!2sBandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Lokasi Warung Steak Bang Jago">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="section section--alt">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="t-subheading">Gallery</span>
+      <h2 class="t-headline" style="margin-top:16px;">Suasana & <em style="font-style:italic;color:var(--gold);">Sajian</em></h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <img src="assets/images/hero_steak.png" alt="Signature steak sizzling" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-view"><i data-lucide="zoom-in" class="icon icon-sm"></i> Lihat</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/menu_beef_tenderloin.png" alt="Beef tenderloin plating" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-view"><i data-lucide="zoom-in" class="icon icon-sm"></i> Lihat</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/menu_chicken_steak.png" alt="Chicken steak dengan saus mushroom" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-view"><i data-lucide="zoom-in" class="icon icon-sm"></i> Lihat</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/menu_spaghetti_blackpepper.png" alt="Spaghetti beef blackpepper" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-view"><i data-lucide="zoom-in" class="icon icon-sm"></i> Lihat</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/menu_spaghetti_carbonara.png" alt="Spaghetti carbonara creamy" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-view"><i data-lucide="zoom-in" class="icon icon-sm"></i> Lihat</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a href="https://www.instagram.com/warungsteakbangjago/" target="_blank" class="btn btn-ghost" id="btn-ig">
+        <i data-lucide="instagram" class="icon icon-sm"></i> Lihat di Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONI ===== -->
+<section id="testimoni" class="section">
+  <div class="container">
+    <div class="section-header section-header--center reveal">
+      <span class="t-subheading">Testimoni</span>
+      <h2 class="t-headline" style="margin-top:16px;">Kata Mereka yang <em style="font-style:italic;color:var(--gold);">Sudah Mencoba</em></h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-rating">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+        </div>
+        <p class="testimonial-quote">Steak paling worth it se-Bandung! Porsinya jumbo, harganya murah, rasanya tidak kalah dari restoran mahal. Sudah berkali-kali balik ke sini.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">RS</div>
+          <div>
+            <div class="testimonial-name">Rina S.</div>
+            <div class="testimonial-source">via Google Maps</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-rating">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+        </div>
+        <p class="testimonial-quote">Spaghetti carbonara-nya enak banget dan creamynya pas. Menu sangat cocok untuk makan sekeluarga dengan harga yang sangat terjangkau.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">DH</div>
+          <div>
+            <div class="testimonial-name">Dimas H.</div>
+            <div class="testimonial-source">via Google Maps</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="testimonial-rating">
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+          <svg viewBox="0 0 20 20"><path d="M10 1l2.39 6.26H19l-5.19 3.97 1.99 6.27L10 13.77l-5.8 3.73 1.99-6.27L1 7.26h6.61z"/></svg>
+        </div>
+        <p class="testimonial-quote">Chicken mushroom-nya juara! Saus jamurnya creamy, ayamnya empuk. Pesan via GoFood pun sampai masih panas dan enak. Sangat direkomendasikan!</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FN</div>
+          <div>
+            <div class="testimonial-name">Fitri N.</div>
+            <div class="testimonial-source">via GoFood</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="cta" class="section section--alt">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <div class="cta-line-left"></div>
+      <div class="cta-line-right"></div>
+      <span class="t-subheading">Siap Memesan?</span>
+      <h2 class="t-headline" style="margin-top:16px;margin-bottom:16px;">Lapar? Jangan <em style="font-style:italic;color:var(--gold);">Tunda Lagi</em></h2>
+      <p class="t-body" style="margin-bottom:var(--space-lg);">Pesan sekarang dan rasakan steak lezat yang memuaskan. Murah, melimpah, dan selalu fresh.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/6281224329422?text=Halo%20Bang%20Jago%2C%20saya%20mau%20pesan%20sekarang!" target="_blank" class="btn btn-primary" id="btn-cta-wa">
+          <i data-lucide="message-circle" class="icon icon-sm"></i> Pesan via WhatsApp
+        </a>
+        <a href="https://gofood.co.id" target="_blank" class="btn btn-ghost" id="btn-cta-gofood">
+          <i data-lucide="bike" class="icon icon-sm"></i> GoFood
+        </a>
+        <a href="https://shopee.co.id/food" target="_blank" class="btn btn-ghost" id="btn-cta-shopeefood">
+          <i data-lucide="shopping-bag" class="icon icon-sm"></i> ShopeeFood
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo footer-brand" style="display:inline-flex;flex-direction:column;margin-bottom:16px;">
+          <span class="nav-logo-name">Bang <em>Jago</em> Steak</span>
+          <span class="nav-logo-tagline">Murah · Lezat · Melimpah</span>
+        </a>
+        <p>Warung Steak Bang Jago membuktikan bahwa steak enak tidak harus mahal. Bahan segar, bumbu khas, porsi melimpah — untuk semua.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/warungsteakbangjago/" target="_blank" class="btn-icon" aria-label="Instagram"><i data-lucide="instagram" class="icon icon-sm"></i></a>
+          <a href="https://wa.me/6281224329422" target="_blank" class="btn-icon" aria-label="WhatsApp"><i data-lucide="message-circle" class="icon icon-sm"></i></a>
+          <a href="https://maps.app.goo.gl/Gb31RiswycA3pxx66" target="_blank" class="btn-icon" aria-label="Maps"><i data-lucide="map-pin" class="icon icon-sm"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <div class="footer-links">
+          <a href="#tentang">Tentang Kami</a>
+          <a href="#menu">Menu</a>
+          <a href="#cara-order">Cara Order</a>
+          <a href="#lokasi">Lokasi</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#testimoni">Testimoni</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform Order</h4>
+        <div class="footer-links">
+          <a href="https://wa.me/6281224329422" target="_blank">WhatsApp</a>
+          <a href="https://gofood.co.id" target="_blank">GoFood</a>
+          <a href="https://shopee.co.id/food" target="_blank">ShopeeFood</a>
+          <a href="#lokasi">Dine-In</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hubungi Kami</h4>
+        <div class="footer-contact-item">
+          <i data-lucide="phone" class="icon" style="color:var(--gold);width:14px;height:14px;margin-top:2px;"></i>
+          <div class="footer-contact-text"><a href="https://wa.me/6281224329422" target="_blank">0812-2432-9422</a><br>WhatsApp / Telepon</div>
+        </div>
+        <div class="footer-contact-item">
+          <i data-lucide="instagram" class="icon" style="color:var(--gold);width:14px;height:14px;margin-top:2px;"></i>
+          <div class="footer-contact-text"><a href="https://www.instagram.com/warungsteakbangjago/" target="_blank">@warungsteakbangjago</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <i data-lucide="clock" class="icon" style="color:var(--gold);width:14px;height:14px;margin-top:2px;"></i>
+          <div class="footer-contact-text">Buka setiap hari<br>10.00 – 22.00 WIB</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> Warung Steak Bang Jago. Semua hak dilindungi. Halal Certified.</p>
+      <p>Dibuat dengan dedikasi untuk pelanggan setia Bang Jago</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky WA -->
+<div id="sticky-wa">
+  <a href="https://wa.me/6281224329422?text=Halo%20Bang%20Jago%2C%20saya%20mau%20pesan!" target="_blank" class="sticky-wa-btn" id="btn-sticky-wa">
+    <i data-lucide="message-circle" class="icon icon-sm"></i> Pesan Sekarang
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+<script>lucide.createIcons();</script>
+
+<!-- DESIGN SWITCHER FLOATING BUTTON -->
+<div id="design-switcher" style="position: fixed; right: 20px; top: 50%; transform: translateY(-50%); z-index: 10000; font-family: 'Inter', sans-serif;">
+  <button id="switcher-toggle" style="width: 56px; height: 56px; border-radius: 50%; background: #C9A84C; color: #000; border: 4px solid #1a1a1a; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,0,0,0.4); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); padding: 0;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-palette"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="12.5" cy="14.5" r=".5" fill="currentColor"/><circle cx="7.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.92 0 1.7-.39 2.3-1.03a4.03 4.03 0 0 0 .7-3.97 4 4 0 0 1 5.33-4.14 10 10 0 1 0-11.83-11.83A4 4 0 0 1 12 2z"/></svg>
+  </button>
+  
+  <div id="switcher-menu" style="position: absolute; right: 70px; top: 50%; transform: translateY(-50%) scale(0.9); opacity: 0; pointer-events: none; background: #111; padding: 20px; border-radius: 16px; border: 1px solid #333; box-shadow: 0 20px 50px rgba(0,0,0,0.6); width: 240px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); transform-origin: right center;">
+    <h3 style="color: #C9A84C; margin: 0 0 16px 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid #222; padding-bottom: 10px;">Ganti Desain</h3>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <a href="../opsi-1/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 1: Luxury Dark</a>
+      <a href="../opsi-2/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 2: Modern Elegant</a>
+      <a href="../opsi-3/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 3: Rustic Warm</a>
+      <a href="../opsi-4/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 4: Neo-Brutalism</a>
+      <a href="../opsi-5/index.html" class="sw-link" style="padding: 12px 14px; background: #1a1a1a; color: #999; text-decoration: none; border-radius: 8px; font-size: 13px; font-weight: 500; transition: all 0.2s; border: 1px solid #222;">Opsi 5: Street Industrial</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    #design-switcher {
+      right: 15px !important;
+      top: auto !important;
+      bottom: 30px !important;
+      transform: none !important;
+    }
+    #switcher-menu {
+      right: 0 !important;
+      bottom: 70px !important;
+      top: auto !important;
+      transform: translateY(20px) scale(0.9) !important;
+      transform-origin: bottom right !important;
+      width: 220px !important;
+    }
+    #switcher-menu.active {
+      transform: translateY(0) scale(1) !important;
+    }
+  }
+</style>
+
+<script>
+  (function() {
+    const toggle = document.getElementById('switcher-toggle');
+    const menu = document.getElementById('switcher-menu');
+    let isOpen = false;
+
+    function openMenu() {
+      isOpen = true;
+      menu.style.opacity = '1';
+      menu.style.pointerEvents = 'auto';
+      if (window.innerWidth > 768) {
+        menu.style.transform = 'translateY(-50%) scale(1)';
+      } else {
+        menu.classList.add('active');
+        menu.style.transform = 'translateY(0) scale(1)';
+      }
+      toggle.style.background = '#000';
+      toggle.style.color = '#C9A84C';
+      toggle.style.transform = 'rotate(90deg)';
+    }
+
+    function closeMenu() {
+      isOpen = false;
+      menu.style.opacity = '0';
+      menu.style.pointerEvents = 'none';
+      if (window.innerWidth > 768) {
+        menu.style.transform = 'translateY(-50%) scale(0.9)';
+      } else {
+        menu.classList.remove('active');
+        menu.style.transform = 'translateY(20px) scale(0.9)';
+      }
+      toggle.style.background = '#C9A84C';
+      toggle.style.color = '#000';
+      toggle.style.transform = 'rotate(0deg)';
+    }
+
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!isOpen) openMenu();
+      else closeMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (isOpen && !menu.contains(e.target)) {
+        closeMenu();
+      }
+    });
+    
+    // Highlight current
+    const links = document.querySelectorAll('.sw-link');
+    const currentFolder = window.location.pathname.split('/').filter(x => x.startsWith('opsi-'))[0] || '';
+    
+    links.forEach(link => {
+      if (link.getAttribute('href').includes(currentFolder)) {
+        link.style.background = '#C9A84C';
+        link.style.color = '#000';
+        link.style.border = 'none';
+        link.style.fontWeight = '700';
+      }
+      
+      link.addEventListener('mouseenter', () => {
+        if (!link.style.background.includes('C9A84C')) {
+          link.style.background = '#222';
+          link.style.color = '#fff';
+          link.style.transform = 'translateX(5px)';
+        }
+      });
+      link.addEventListener('mouseleave', () => {
+        if (!link.style.background.includes('C9A84C')) {
+          link.style.background = '#1a1a1a';
+          link.style.color = '#999';
+          link.style.transform = 'translateX(0)';
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
