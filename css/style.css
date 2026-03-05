@@ -1,0 +1,288 @@
+:root {
+  --accent: #D4AF37;
+  --accent-glow: rgba(212, 175, 55, 0.4);
+  --dark-base: #050505;
+  --dark-surface: #0E0E0E;
+  --text-main: #FFFFFF;
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+  --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-base);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Background Effects */
+.presentation-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.glow-orb, .glow-orb-2 {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(80px);
+  opacity: 0.3;
+}
+
+/* Content Layout */
+.main-stage {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hero-header {
+  text-align: center;
+  margin-bottom: 120px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: var(--transition);
+}
+
+.hero-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.client-badge {
+  font-size: 11px;
+  letter-spacing: 5px;
+  color: var(--accent);
+  margin-bottom: 30px;
+  font-weight: 600;
+  display: inline-block;
+  padding: 8px 16px;
+  border-left: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+}
+
+.logo-marquee {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.logo-marquee span {
+  font-style: italic;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #FFF, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-msg {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.welcome-msg p {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-weight: 200;
+}
+
+.welcome-msg strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Grid Design Items */
+.design-selection {
+  margin-bottom: 120px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+.design-item {
+  position: relative;
+  grid-column: span 4;
+  height: 400px;
+  background: var(--dark-surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.design-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.design-item.item-1 { grid-column: span 7; height: 500px; }
+.design-item.item-2 { grid-column: span 5; height: 500px; }
+.design-item.item-3 { grid-column: span 12; height: 350px; }
+.design-item.item-4 { grid-column: span 6; height: 450px; }
+.design-item.item-5 { grid-column: span 6; height: 450px; }
+
+.item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 60%);
+  z-index: 2;
+  transition: var(--transition);
+}
+
+.item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  z-index: 5;
+  transition: var(--transition);
+}
+
+.design-tag {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.item-content h3 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  transition: var(--transition);
+}
+
+.item-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.reveal-arrow {
+  margin-top: 30px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+/* Hover States */
+.design-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+}
+
+.design-item:hover .item-overlay {
+  background: linear-gradient(to top, rgba(212, 175, 55, 0.15) 0%, rgba(0,0,0,0.9) 100%);
+}
+
+.design-item:hover h3 {
+  transform: translateY(-5px);
+  color: var(--accent);
+}
+
+.design-item:hover .reveal-arrow {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Background Textures per Item */
+.item-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.1;
+  transition: var(--transition);
+  background-size: cover;
+  background-position: center;
+}
+
+.design-item:hover .item-bg {
+  opacity: 0.3;
+  transform: scale(1.1);
+}
+
+.item-1 .item-bg { background-image: url('../opsi-1/assets/images/hero_steak.png'); }
+.item-2 .item-bg { background-image: url('../opsi-2/assets/images/menu_sirloin_nasi.png'); }
+.item-3 .item-bg { background-image: url('../opsi-3/assets/images/hero_steak.png'); }
+.item-4 .item-bg { background-image: url('../opsi-4/assets/images/menu_beef_tenderloin.png'); }
+.item-5 .item-bg { background-image: url('../opsi-5/assets/images/menu_chicken_steak.png'); }
+
+/* Footer Note */
+.footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.footer-note.visible {
+  opacity: 1;
+}
+
+.footer-note .line {
+  height: 1px;
+  background: var(--text-muted);
+  width: 150px;
+}
+
+.footer-note p {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .design-item { grid-column: span 6 !important; height: 400px !important; }
+  .design-item.item-3 { grid-column: span 12 !important; }
+}
+
+@media (max-width: 768px) {
+  .main-stage { padding: 0 24px; }
+  .logo-marquee { font-size: 3.5rem; }
+  .design-item { grid-column: span 12 !important; height: 300px !important; }
+  .item-content h3 { font-size: 2rem; }
+  .footer-note .line { width: 50px; }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BANG JAGO STEAK | Exclusive Presentation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- THE SHOWCASE -->
+  <div class="presentation-wrapper">
+    <div class="glow-orb"></div>
+    <div class="glow-orb-2"></div>
+
+    <main class="main-stage">
+      <header class="hero-header">
+        <div class="client-badge" id="reveal-badge">SPECIAL PRESENTATION FOR</div>
+        <h1 class="logo-marquee">BANG <span>JAGO</span></h1>
+        <div class="welcome-msg">
+          <p>Selamat datang kembali. Kami telah menyiapkan 5 pendekatan visual untuk evolusi digital <strong>Bang Jago Steak</strong>. Setiap desain membawa spirit yang berbeda—pilih yang paling selaras dengan langkah Anda berikutnya.</p>
+        </div>
+      </header>
+
+      <section class="design-selection">
+        <div class="grid-container">
+          
+          <!-- OPTION 1 -->
+          <a href="opsi-1/index.html" class="design-item item-1">
+            <div class="item-overlay"></div>
+            <div class="item-content">
+              <span class="design-tag">CONCEPT 01</span>
+              <h3>THE NOBILITY</h3>
+              <p>Luxury Dark & Golden Accents</p>
+              <div class="reveal-arrow"><i data-lucide="chevron-right"></i></div>
+            </div>
+            <div class="item-bg"></div>
+          </a>
+
+          <!-- OPTION 2 -->
+          <a href="opsi-2/index.html" class="design-item item-2">
+            <div class="item-overlay"></div>
+            <div class="item-content">
+              <span class="design-tag">CONCEPT 02</span>
+              <h3>THE ARCHITECT</h3>
+              <p>Modern, Minimalist & Precise</p>
+              <div class="reveal-arrow"><i data-lucide="chevron-right"></i></div>
+            </div>
+            <div class="item-bg"></div>
+          </a>
+
+          <!-- OPTION 3 -->
+          <a href="opsi-3/index.html" class="design-item item-3">
+            <div class="item-overlay"></div>
+            <div class="item-content">
+              <span class="design-tag">CONCEPT 03</span>
+              <h3>THE HERITAGE</h3>
+              <p>Rustic Warmth & Authentic Soul</p>
+              <div class="reveal-arrow"><i data-lucide="chevron-right"></i></div>
+            </div>
+            <div class="item-bg"></div>
+          </a>
+
+          <!-- OPTION 4 -->
+          <a href="opsi-4/index.html" class="design-item item-4">
+            <div class="item-overlay"></div>
+            <div class="item-content">
+              <span class="design-tag">CONCEPT 04</span>
+              <h3>THE REBEL</h3>
+              <p>Neo-Brutalism & Bold Energy</p>
+              <div class="reveal-arrow"><i data-lucide="chevron-right"></i></div>
+            </div>
+            <div class="item-bg"></div>
+          </a>
+
+          <!-- OPTION 5 -->
+          <a href="opsi-5/index.html" class="design-item item-5">
+            <div class="item-overlay"></div>
+            <div class="item-content">
+              <span class="design-tag">CONCEPT 05</span>
+              <h3>THE FOUNDRY</h3>
+              <p>Street Industrial & Urban Spirit</p>
+              <div class="reveal-arrow"><i data-lucide="chevron-right"></i></div>
+            </div>
+            <div class="item-bg"></div>
+          </a>
+
+        </div>
+      </section>
+
+      <footer class="footer-note">
+        <div class="line"></div>
+        <p>CURATED BY DESIGN TEAM WITH RIGOROUS ATTENTION TO DETAIL</p>
+        <div class="line"></div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+    
+    // Intersection Observer for scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.design-item, .hero-header, .footer-note').forEach(el => observer.observe(el));
+    
+    // Mouse hover effect for orbs
+    document.addEventListener('mousemove', (e) => {
+      const orb1 = document.querySelector('.glow-orb');
+      const orb2 = document.querySelector('.glow-orb-2');
+      const x = e.clientX;
+      const y = e.clientY;
+      
+      orb1.style.left = `${x}px`;
+      orb1.style.top = `${y}px`;
+      
+      setTimeout(() => {
+        orb2.style.left = `${x}px`;
+        orb2.style.top = `${y}px`;
+      }, 100);
+    });
+  </script>
+</body>
+</html>
